@@ -5,13 +5,17 @@ import java.util.Date;
 public class Task {
 
     private String title, description;
-    private Date date;
+    private long date;
 
-    public Task(String title, String description, Date date) {
+    public Task(String title, String description, long date) {
         this.title = title;
         this.description = description;
         this.date = date;
         Data.addTask(this);
+    }
+
+    public Task(){
+
     }
 
     public String getTitle() {
@@ -30,11 +34,11 @@ public class Task {
         this.description = description;
     }
 
-    public Date getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(long date) {
         this.date = date;
     }
 }
